@@ -194,12 +194,12 @@ const animationTimeline = () => {
       },
       "-=2"
     )
-    .from(".hat", 0.5, {
-      x: -100,
-      y: 350,
-      rotation: -180,
-      opacity: 0
-    })
+    // .from(".hat", 0.5, {
+    //   x: -100,
+    //   y: 350,
+    //   rotation: -180,
+    //   opacity: 0
+    // })
     .staggerFrom(
       ".wish-hbd span",
       0.7,
@@ -245,9 +245,9 @@ const animationTimeline = () => {
       {
         visibility: "visible",
         opacity: 0,
-        scale: 80,
-        repeat: 3,
-        repeatDelay: 1.4
+        scale: 60,
+        repeat: 2,
+        repeatDelay: 1.1
       },
       0.3
     )
@@ -278,7 +278,6 @@ const animationTimeline = () => {
 
 // Import the data to customize and insert them into page
 const fetchData = () => {
-  return;
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
