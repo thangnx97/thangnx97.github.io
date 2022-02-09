@@ -1,0 +1,46 @@
+<!DOCTYPE html lang "en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Valentine </title>
+    <link rel="stylesheet" href="style.css"></head>
+</head>
+<body>
+   <div class="user-card">
+        <span class = "user-info-holder">
+           <h2 class="name">Sắp Valentine rồi </h2>
+            <h2 class="name">Cậu làm người yêu tớ nhé ^^</h2>
+            <div class="yes">
+                <img src="love.png" alt="">
+            </div>
+            <span class="button">
+                <button id="1" data-toggle="modal" data-target="#myModal" class="show-more-btn-no" >Đồng ý</button>
+                <button id ="2" data-toggle="modal" data-target="#nyModal" class="show-more-btn-no" >Không</button>
+            </span>
+        </span>
+    </div>
+</body>
+<script >
+    const btn1 = document.getElementById("1");
+    const btn2 = document.getElementById("2");
+
+    btn1.onmouseover = function(evt){
+        let text = btn1.innerText;
+        if(text == "Không"){
+            btn1.innerText = "Đồng ý";
+            btn2.innerText = "Không";
+        }
+    }
+
+    btn2.onmouseover = function(evt){
+        let text = btn2.innerText;
+        if(text == "Không"){
+            btn2.innerText = "Đồng ý";
+            btn1.innerText = "Không";
+        }
+    }
+
+
+
+
+</script>
+</html>
