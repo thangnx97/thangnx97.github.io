@@ -256,6 +256,21 @@ const animationTimeline = () => {
       y: 30,
       zIndex: "-1"
     })
+    .from(".love", 0.7, {
+      opacity: 0,
+      y: 10
+      // scale: 0.7
+    })
+    .to(
+      ".love",
+      0.7,
+      {
+        opacity: 0,
+        y: 10
+      },
+      "+=2"
+    )
+
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
@@ -277,28 +292,28 @@ const animationTimeline = () => {
 };
 
 // Import the data to customize and insert them into page
-const fetchData = () => {
-  fetch("customize.json")
-    .then(data => data.json())
-    .then(data => {
-      Object.keys(data).map(customData => {
-        if (data[customData] !== "") {
-          if (customData === "imagePath") {
-            document
-              .getElementById(customData)
-              .setAttribute("src", data[customData]);
-          } else {
-            document.getElementById(customData).innerText = data[customData];
-          }
-        }
-      });
-    });
-};
+// const fetchData = () => {
+//   fetch("customize.json")
+//     .then(data => data.json())
+//     .then(data => {
+//       Object.keys(data).map(customData => {
+//         if (data[customData] !== "") {
+//           if (customData === "imagePath") {
+//             document
+//               .getElementById(customData)
+//               .setAttribute("src", data[customData]);
+//           } else {
+//             document.getElementById(customData).innerText = data[customData];
+//           }
+//         }
+//       });
+//     });
+// };
 
 // Run fetch and animation in sequence
 const resolveFetch = () => {
   return new Promise((resolve, reject) => {
-    fetchData();
+    // fetchData();
     resolve("Fetch done!");
   });
 };
